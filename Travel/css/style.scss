@@ -743,7 +743,73 @@ a {
 	}
 }
 
+//=======================FOOTER=================================================================================================================================
 
+.footer {
+	height: 50px;
+	margin: -50px 0px 0px 0px;
+
+	// .footer__container
+
+	&__container {
+
+	}
+
+	&__body {
+		display: flex;
+	   align-items: center;
+	   justify-content: space-between;
+	
+	}
+	&__info {
+		display: flex;
+		gap: 20px;
+		a {
+			cursor: pointer;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				transition: all 0.3s ease 0s;
+				transform: scale(1.1);
+			
+			}
+		}
+	}
+	// .footer__text
+
+	&__text {
+		font-family: 'Red Hat Text';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+      margin: 0px 24px 0px 0px;
+      color: #FFFFFF;
+	}
+
+	// .footer__links
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		
+		
+	}
+   &__item {
+		transition: all 0.3s ease 0s;
+		&:hover {
+			transition: all 0.3s ease 0s;
+			transform: scale(1.1);
+		
+		}
+	}
+	// .footer__link
+
+	&__link {
+		
+	}
+}
 
 
 /* Условные ПК, ноуты и телевизоры */
