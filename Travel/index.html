@@ -14,7 +14,7 @@
 				<div class="header__container">
 					<div class="header__body">
 						<div class="header__logo logo">
-							<a class="logo__link" href="http://google.com" target="_blank"><img class="logo__img" src="./img/logo.svg" alt=""></a>
+							<a class="logo__link" href="http://google.com" target="_blank"><img class="logo__img" src="./img/logo.svg" alt="logo"></a>
 						</div>
 						<div class="header__menu menu">
 							<nav class="menu__body">
@@ -23,10 +23,19 @@
 									<li class="menu__item"><a href="#preview" class="menu__link">Plan Your Trip</a></li>
 									<li class="menu__item"><a href="#destinations" class="menu__link">Destinations</a></li>
 									<li class="menu__item"><a href="#stories" class="menu__link">Travel Stories</a></li>
+									<li class="menu__hidden-link"><a href="#" class="menu__link">Account</a></li>
+									<li class="menu__hidden-link"><a href="#footer" class="menu__link">Social Media</a></li>
+									<li class="menu__close"><img src="./img/menu-close.svg" alt="menu close"></li>
 								</ul>
+								<div class="overlay"></div>
 							</nav>
 						</div>
 							<button type="submit" class="header__button">Login</button>
+							<div class="burger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
 					</div>
 				</div>
 			</header>
@@ -74,19 +83,36 @@
 								<!-- Слайд -->
 								<div class="destinations__slide swiper-slide">
 									<div class="destinations__image">
-										<img src="./img/spain.jpg" alt="Spain photo">
+										<picture>
+											<source media="(max-width: 568px)" srcset="img/japan-mobile.jpg">
+											<source media="(min-width: 569px)" srcset="img/spain.jpg">
+											<img class="destinations__image-spain" src="./img/spain.jpg" alt="Spain photo">
+									  </picture>
 									</div>
 									<div class="destinations__image">
-										<img src="./img/japan.jpg" alt="Japan photo">
+										<picture>
+											<source media="(max-width: 568px)" srcset="img/spain-mobile.jpg">
+											<source media="(min-width: 569px)" srcset="img/japan.jpg">
+											<img class="destinations__image-japan" src="./img/japan.jpg" alt="Japan photo">
+									  </picture>
 									</div>
 									<div class="destinations__image">
-										<img src="./img/usa.jpg" alt="Usa photo">
+										<picture>
+											<source media="(max-width: 568px)" srcset="img/usa-mobile.jpg">
+											<source media="(min-width: 569px)" srcset="img/usa.jpg">
+											<img src="./img/usa.jpg" alt="Usa photo">
+									  </picture>
+										
 									</div>
 								</div>
 							</div>
 							<div class="swiper-pagination">	
 								<span></span>
 							</div>
+							<div class="destinations__arrows">
+								<div class="destinations__arrows__prev"><img src="./img/arrowleft.svg" alt="prev_arrow"></div>
+								<div class="destinations__arrows__next"><img src="./img/arrowright.svg" alt="next_arrow"></div>
+						  </div>
 						 </div>
 						 <div class="destinations__button">
 						 <button type="submit">Find More</button>
@@ -98,32 +124,53 @@
 						<div class="stories__bg">
 						<div class="stories__body">
 						<div class="stories-items">
+							<div class="stories-items__container">
 							<div class="stories__item item-stories">
-								<img class="item-stories__icon" src="./img/thai.jpg" alt="thailand">
+								<picture class="item-stories__pic" >
+									<source media="(max-width: 767.98px)" srcset="img/thai-mob.jpg">
+									<source media="(min-width: 569px)" srcset="img/thai.jpg">
+									<img class="item-stories__icon" src="./img/thai.jpg" alt="thailand">
+							  </picture>
 								<div class="item-stories__body">
 								<div class="item-stories__title">10 Photos of Attractive Thailand</div>
-								<div class="item-stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a href="#">Read More</a></div>
+								<div class="item-stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+								<a class="item-stories__link" href="#">Read More</a>
 							</div>
 							</div>
 							<div class="stories__item item-stories">
-								<img class="item-stories__icon" src="./img/utah.jpg" alt="utah">
+								<picture class="item-stories__pic" >
+									<source media="(max-width: 767.98px)" srcset="img/utah-mob.jpg">
+									<source media="(min-width: 569px)" srcset="img/utah.jpg">
+									<img class="item-stories__icon" src="./img/utah.jpg" alt="utah">
+							  </picture>
 								<div class="item-stories__body">
 								<div class="item-stories__title">Canyonlands National Park, Utah</div>
-								<div class="item-stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a href="#">Read More</a></div>
+								<div class="item-stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+								<a class="item-stories__link" href="#">Read More</a>
 							</div>
 							</div>
 							<div class="stories__item item-stories">
-								<img class="item-stories__icon" src="./img/mount.jpg" alt="mountains">
+								<picture class="item-stories__pic" >
+									<source media="(max-width: 767.98px)" srcset="img/mount-mob.jpg">
+									<source media="(min-width: 569px)" srcset="img/mount.jpg">
+									<img class="item-stories__icon" src="./img/mount.jpg" alt="utah">
+							  </picture>
 								<div class="item-stories__body">
 								<div class="item-stories__title">I left my heart in the Mountains!</div>
-								<div class="item-stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a href="#">Read More</a></div>
+								<div class="item-stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+								<a class="item-stories__link" href="#">Read More</a>
 							</div>
 							</div>
 							<div class="stories__item item-stories">
-								<img class="item-stories__icon" src="./img/desert.jpg" alt="desert">
+								<picture class="item-stories__pic" >
+									<source media="(max-width: 767.98px)" srcset="img/desert-mob.jpg">
+									<source media="(min-width: 569px)" srcset="img/desert.jpg">
+									<img class="item-stories__icon" src="./img/desert.jpg" alt="utah">
+							  </picture>
 								<div class="item-stories__body">
 								<div class="item-stories__title">The Longest journey in my life!</div>
-								<div class="item-stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a href="#">Read More</a></div>
+								<div class="item-stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</div>
+								<a class="item-stories__link" href="#">Read More</a>
 							</div>
 							</div>
 			
@@ -131,6 +178,7 @@
 						<div class="stories__button">
 							<button type="submit">See More</button>
 						  </div>
+						</div>
 						</div>
 					</div>
 				</section>
@@ -153,6 +201,10 @@
 			</footer>
 	</div>
 	<script src="js/index.js"></script>
+	<script src="js/script.js"></script>
 	</body>
 </html>
+
+
+
 
