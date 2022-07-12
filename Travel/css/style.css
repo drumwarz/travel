@@ -150,7 +150,7 @@ body {
   height: 2.67px;
   border-radius: 5px;
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .header .burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -210,7 +210,7 @@ body {
     font-size: 14px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .header__button {
     display: none;
   }
@@ -242,7 +242,7 @@ body {
             column-gap: 10px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -307,7 +307,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .menu__item {
-    font-size: 14px;
+    font-size: 16px;
     padding: 4px 0px;
   }
 }
@@ -358,12 +358,28 @@ body {
   color: #FFFFFF;
 }
 
+@media (max-width: 550px) {
+  .overlay-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    -webkit-transition: 0.8s all;
+    -o-transition: 0.8s all;
+    transition: 0.8s all;
+  }
+}
+
 .preview {
   position: relative;
   margin-top: -90px;
   background: url("../img/garrett.jpg") center/cover no-repeat;
 }
-@media (max-width: 560px) {
+@media (max-width: 390px) {
   .preview {
     background: -webkit-gradient(linear, left top, left bottom, from(#0D606F), color-stop(25.1%, rgba(13, 96, 111, 0))), url("../img/bg390.jpg") center center/cover no-repeat;
     background: -o-linear-gradient(top, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%), url("../img/bg390.jpg") center center/cover no-repeat;
@@ -473,6 +489,15 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 16px;
+  }
+}
+@media (max-width: 385px) {
+  .form {
+    max-width: 360px;
+    padding: 0 10px 0 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 .form__input {
@@ -605,6 +630,13 @@ body {
     margin-left: -5px;
   }
 }
+@media (max-width: 390px) {
+  .form__input {
+    padding: 17px 0px 16px 0px;
+    max-width: 226px;
+    margin-left: -5px;
+  }
+}
 .form__button {
   background: #0D606F;
   -webkit-box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
@@ -650,7 +682,7 @@ body {
 }
 @media (max-width: 550px) {
   .form__button {
-    padding: 7.5px 10px 7.5px 10px;
+    padding: 7.4px 9px 7.4px 9.8px;
     font-size: 11px;
     line-height: 15px;
     margin: 0px 0px 0px 15px;
@@ -699,7 +731,7 @@ body {
   .steps__title {
     font-size: 14px;
     line-height: 19px;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 21px 0px;
   }
 }
 .step {
@@ -917,6 +949,25 @@ body {
 @media (max-width: 568px) {
   .destinations__image img {
     border-radius: 16px;
+  }
+}
+.destinations__text {
+  display: none;
+}
+@media (max-width: 568px) {
+  .destinations__text {
+    display: block;
+    font-family: "Red Hat Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    text-transform: uppercase;
   }
 }
 @media (max-width: 1024px) {
