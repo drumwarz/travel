@@ -261,7 +261,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    height: 251px;
+    height: 300px;
     width: 165px;
     background: #f2785c;
     border-radius: 10px;
@@ -273,6 +273,11 @@ body {
     -webkit-transition: 0.8s all;
     -o-transition: 0.8s all;
     transition: 0.8s all;
+  }
+}
+@media (max-width: 390px) {
+  .menu__list {
+    height: 251px;
   }
 }
 .menu__list-active {
@@ -319,7 +324,7 @@ body {
 .menu__hidden-link {
   display: none;
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .menu__hidden-link {
     display: block;
     color: #FFFFFF;
@@ -345,7 +350,7 @@ body {
 .menu__close {
   display: none;
 }
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .menu__close {
     position: absolute;
     top: 8px;
