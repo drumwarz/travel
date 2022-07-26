@@ -1,6 +1,4 @@
 
-
-
 window.addEventListener('DOMContentLoaded',() =>{
 	const menu = document.querySelector('.menu__list'),
 			burger = document.querySelector('.burger'),
@@ -145,5 +143,7 @@ form.addEventListener('submit', (e) => {
 				}
 		  });
 		});
+
+
 	 
 
