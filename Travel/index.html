@@ -23,14 +23,14 @@
 									<li class="menu__item"><a href="#preview" class="menu__link">Plan Your Trip</a></li>
 									<li class="menu__item"><a href="#destinations" class="menu__link">Destinations</a></li>
 									<li class="menu__item"><a href="#stories" class="menu__link">Travel Stories</a></li>
-									<li class="menu__hidden-link"><a href="#" class="menu__link">Account</a></li>
+									<li class="menu__hidden-link login"><a href="#" class="menu__link">Account</a></li>
 									<li class="menu__hidden-link"><a href="#footer" class="menu__link">Social Media</a></li>
 									<li class="menu__close"><img src="./img/menu-close.svg" alt="menu close"></li>
 								</ul>
 								<div class="overlay"></div>
 							</nav>
 						</div>
-							<button type="submit" class="header__button">Login</button>
+							<button type="submit" class="header__button login">Login</button>
 							<div class="burger">
 								<span></span>
 								<span></span>
@@ -84,34 +84,37 @@
 								<div class="destinations__slide swiper-slide">
 									<div class="destinations__image">
 										<picture>
-											<source media="(max-width: 568px)" srcset="img/japan-mobile.jpg">
+											<source media="(max-width: 568px)" srcset="img/spain-mobile.jpg">
 											<source media="(min-width: 569px)" srcset="img/spain.jpg">
 											<img class="destinations__image-spain" src="./img/spain.jpg" alt="Spain photo">
-									  </picture>
-									</div>
-									<div class="destinations__image">
-										<picture>
-											<source media="(max-width: 568px)" srcset="img/spain-mobile.jpg">
-											<source media="(min-width: 569px)" srcset="img/japan.jpg">
-											<img class="destinations__image-japan" src="./img/japan.jpg" alt="Japan photo">
 									  </picture>
 									  <div class="destinations__text">spain</div>
 									</div>
 									<div class="destinations__image">
 										<picture>
+											<source media="(max-width: 568px)" srcset="img/japan-mobile.jpg">
+											<source media="(min-width: 569px)" srcset="img/japan.jpg">
+											<img class="destinations__image-japan" src="./img/japan.jpg" alt="Japan photo">
+									  </picture>
+									  <div class="destinations__text">japan</div>
+									</div>
+									<div class="destinations__image">
+										<picture>
 											<source media="(max-width: 568px)" srcset="img/usa-mobile.jpg">
 											<source media="(min-width: 569px)" srcset="img/usa.jpg">
-											<img src="./img/usa.jpg" alt="Usa photo">
+											<img class="destinations__image-usa" src="./img/usa.jpg" alt="Usa photo">
 									  </picture>
-										
+									  <div class="destinations__text">usa</div>
 									</div>
 								</div>
 							</div>
-							<div class="swiper-pagination">	
-								<span></span>
-							</div>
+							<div class="destinations__controls">
+								<div class="destinations__controls-item"></div>
+								<div class="destinations__controls-item"></div>
+								<div class="destinations__controls-item"></div>
+						  </div>
 							<div class="destinations__arrows">
-								<div class="destinations__arrows__prev"><img src="./img/arrowleft.svg" alt="prev_arrow"></div>
+								<div class="destinations__arrows__prev"><img src="./img/arrowright.svg" alt="prev_arrow"></div>
 								<div class="destinations__arrows__next"><img src="./img/arrowright.svg" alt="next_arrow"></div>
 						  </div>
 						 </div>
@@ -200,6 +203,33 @@
 				</div>
 				</div>
 			</footer>
+		  <div class="modal">
+			<h2 class="modal__title">Log in to your account</h2>
+			<div class="change-block" style="display: block;">
+				 <button class="facebook social"><img src="./img/fblogo.svg" alt="facebook"><span>Sign In with
+							Facebook</span></button>
+				 <button class="google social"><img src="./img/googlelogo.svg" alt="google"><span>Sign In with
+							Google</span></button>
+				 <div class="divider-text">or</div>
+			</div>
+			<form action="#" class="modal-form">
+				 <label for="e-mail">E-mail</label>
+				 <input type="email" id="e-mail" name="email">
+				 <label for="password">Password</label>
+				 <input type="password" id="password" name="password">
+				 <button type="submit" id="sumbit">Sign in</button>
+ 
+			</form>
+			<div class="change-block" style="display: block;">
+				 <a class="modal__link" href="#">Forgot Your Password?</a>
+			</div>
+			<div class="divider"></div>
+			<div class="sub">
+				 <div class="sign-up">Don't have an account?</div>
+				 <a href="#" class="modal__link modal__link-signup">Register</a>
+			</div>
+	  </div>
+	  <div class="modal-overlay"></div>
 	</div>
 	<script src="js/index.js"></script>
 	<script src="js/script.js"></script>
