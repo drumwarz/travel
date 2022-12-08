@@ -1,1 +1,1 @@
-https://drumwarz.github.io/travel/
+https://drumwarz.github.io/travel/Travel
